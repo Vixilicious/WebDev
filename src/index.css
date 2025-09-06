@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 351 100% 91%;
+    --primary-foreground: 355 90% 10%;
+
+    --secondary: 28 98% 75%;
+    --secondary-foreground: 28 10% 10%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 351 100% 91%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 351 100% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 351 100% 91%;
+    --sidebar-primary-foreground: 0 0% 20%;
+    --sidebar-accent: 351 100% 96%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 351 100% 90%;
+    --sidebar-ring: 351 100% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold mb-6;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold mb-4 mt-8;
+  }
+  
+  h3 {
+    @apply text-2xl font-bold mb-3 mt-6;
+  }
+  
+  p {
+    @apply mb-4 leading-relaxed text-zinc-700;
+  }
+
+  ul, ol {
+    @apply mb-4;
+  }
+
+  code {
+    @apply font-mono text-pink-dark bg-pink/10 px-1 py-0.5 rounded text-sm;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .code-block {
+    @apply bg-zinc-800 text-white p-4 rounded-md my-4 overflow-x-auto font-mono text-sm;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-pink-dark to-orange-dark bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-pink-dark hover:bg-pink-dark/90 text-white font-medium py-2 px-4 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-orange-dark hover:bg-orange-dark/90 text-white font-medium py-2 px-4 rounded-md transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-pink-dark text-zinc-800 hover:bg-pink/20 font-medium py-2 px-4 rounded-md transition-colors;
+  }
+}
