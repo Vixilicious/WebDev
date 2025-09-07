@@ -148,9 +148,10 @@ const HTMLIntro = () => {
             “Begin this part!”
             <br /> Example: <code>&lt;p&gt;</code> (start a paragraph)
           </li>
+          <br />
           <li>
             <strong>The closing/ending tag:</strong> Tells the browser to stop.
-            And this signals the browser and tells is "Okay, you can stop this
+            And this signals the browser and tells it "Okay, you can stop this
             part now!". It looks almost the same, but has a "/" before the name.{" "}
             <br /> Example: <code>&lt;/p&gt;</code> (end the paragraph)
           </li>
